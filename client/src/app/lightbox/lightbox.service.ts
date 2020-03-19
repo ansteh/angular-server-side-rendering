@@ -22,7 +22,7 @@ export class LightboxService {
   }
 
   getData(): Observable<any> {
-    console.log('getData', this.apiUrl);
+    console.log('getData', `${this.apiUrl}/test`);
     return this.http.get<any>(`${this.apiUrl}/test`)
       .pipe(
         tap(data => console.log('fetched data', data)),

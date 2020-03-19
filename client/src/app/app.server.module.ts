@@ -12,11 +12,11 @@ import { UniversalInterceptor } from './universal-interceptor';
     AppModule,
     ServerModule,
   ],
-  // providers: [{
-  //   provide: HTTP_INTERCEPTORS,
-  //   useClass: UniversalInterceptor,
-  //   multi: true
-  // }],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: UniversalInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppServerModule {}

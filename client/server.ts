@@ -28,6 +28,8 @@ export function app() {
     res.json({ server: 'rendering' });
   });
 
+  // app.use('/api/salonClient', require('../api/salonClient'));
+
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
