@@ -23,7 +23,11 @@ export function app() {
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
-  // app.get('/api/**', (req, res) => { });
+  server.get('/api/**', (req, res) => {
+    console.log('api', req.url);
+    res.json({ server: 'rendering' });
+  });
+
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
